@@ -1,0 +1,23 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__group {
+  display: flex;
+  gap: 10px;
+}
+
+.form__button {
+  border: 1px solid #61dafb;
+  cursor: pointer;
+  padding: 10px 20px;
+  height: 50px;
+  outline: none;
+  border-radius: 8px;
+  background: #61dafb;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 23px;
+  text-align: left;
+}

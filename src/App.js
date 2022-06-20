@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Form from "./component/form/Form";
+import GetPath from "./store/get-path-context";
 
 function App() {
+  const [query, setQuery] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GetPath.Provider value={query}>
+      <div className='App'>
+        <header className='App-header'>
+          <Form />
+        </header>
+      </div>
+    </GetPath.Provider>
   );
 }
 
